@@ -3,10 +3,9 @@ import { defineConfig, devices } from '@playwright/test';
 import { defineBddConfig } from 'playwright-bdd';
 
 const testDir = defineBddConfig({
-  paths: ['BDD framework/EcomLogin.feature'],
-  require: ['e2e\EcomLogin.js'],
+  paths: ['Aklogin.feature'],
+  require: ['AkLogin.spec.js'],
 });
-
 
 /**
  * Read environment variables from file.
@@ -20,7 +19,7 @@ const testDir = defineBddConfig({
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-  testDir: './e2e',
+  testDir,
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -47,7 +46,7 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
+    /*{
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
