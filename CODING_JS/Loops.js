@@ -32,8 +32,19 @@ while(k<=100){
 
 //DO WHILE LOOP
 
-let k = 100;
+/*let k = 100;
 do{
     console.log(k);
     k-=10;
 }while(k>=10);
+*/
+
+//IF ELSE STATEMENT
+
+let mark = 5;
+if (mark>=33){
+    console.log("You are pass");
+}else
+{
+    console.log("You are fail");
+}
