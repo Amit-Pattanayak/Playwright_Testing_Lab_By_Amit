@@ -1,6 +1,13 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+import { defineBddConfig } from 'playwright-bdd';
 
+
+const testDir = defineBddConfig({
+  paths: ['Playwright/FeatureFile/Login.feature'], // Path to all feature files
+ require: ['Playwright/Step_Defination/Login.spec.js'],     // Folder for step definitions
+  //outputDir: './Playwright/Step_Defination',     // Where new step files will be created
+});
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -13,7 +20,7 @@ import { defineConfig, devices } from '@playwright/test';
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-  testDir: './e2e',
+  testDir,
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -39,7 +46,7 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-
+/*
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
@@ -49,7 +56,7 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
-
+*/
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',

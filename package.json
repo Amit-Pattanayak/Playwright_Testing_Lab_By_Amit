@@ -16,8 +16,8 @@
   },
   "homepage": "https://github.com/Amit-Pattanayak/PlayWright_Agent_Testing#readme",
   "devDependencies": {
-    "@cucumber/cucumber": "^13.0.0",
-    "@playwright/test": "^1.62.0",
+    "@cucumber/cucumber": "^13.2.1",
+    "@playwright/test": "^1.62.1",
     "@types/node": "^26.0.0",
     "playwright-bdd": "^9.2.0"
   },
