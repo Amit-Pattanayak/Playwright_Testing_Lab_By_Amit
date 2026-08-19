@@ -4,8 +4,8 @@ import { defineBddConfig } from 'playwright-bdd';
 
 
 const testDir = defineBddConfig({
-  paths: ['Playwright/FeatureFile/Login.feature'], // Path to all feature files
- require: ['Playwright/Step_Defination/Login.spec.js'],     // Folder for step definitions
+  paths: ['PLAYWRIGHT_BDD/FeatureFile/Login.feature'], // Path to all feature files
+ require: ['PLAYWRIGHT_BDD/Step_Defination/Login.spec.js'],     // Folder for step definitions
   //outputDir: './Playwright/Step_Defination',     // Where new step files will be created
 });
 /**
@@ -20,7 +20,7 @@ const testDir = defineBddConfig({
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-  testDir,
+  testDir :'./Playwright_manual',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
