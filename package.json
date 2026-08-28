@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npm run bddgen && npm run playwright-test",
+    "bddgen": "npx bddgen",
+    "playwright-test": "npx playwright test --reporter=html,list"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Amit-Pattanayak/PlayWright_Agent_Testing.git"
