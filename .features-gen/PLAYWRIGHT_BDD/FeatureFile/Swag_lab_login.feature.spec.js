@@ -1,47 +1,47 @@
-// Generated from: PLAYWRIGHT_BDD\FeatureFile\Login_mulltiple_user.feature
-import { test } from "playwright-bdd";
+// Generated from: PLAYWRIGHT_BDD\FeatureFile\Swag_lab_login.feature
+import { test } from "../../../PLAYWRIGHT_BDD/Fixtures/Swag_fixture.js";
 
 test.describe('Verify that users can log in with valid credentials and handle different user types.', () => {
 
-  test.beforeEach('Background', async ({ Given, page }, testInfo) => { if (testInfo.error) return;
-    await Given('I navigate to "https://www.saucedemo.com/"', null, { page }); 
+  test.beforeEach('Background', async ({ Given, swag_lab_loginPage }, testInfo) => { if (testInfo.error) return;
+    await Given('I navigate to "https://www.saucedemo.com/"', null, { swag_lab_loginPage }); 
   });
   
   test.describe('Verify login for multiple user types', () => {
 
-    test('Example #1', { tag: ['@DataDriven'] }, async ({ When, Then, And, page }) => { 
-      await When('I enter username "standard_user"', null, { page }); 
-      await And('I enter password "secret_sauce"', null, { page }); 
-      await And('I click on the login button', null, { page }); 
-      await Then('I should be redirected to the homepage "https://www.saucedemo.com/inventory.html"', null, { page }); 
+    test('Example #1', { tag: ['@DataDriven'] }, async ({ When, Then, And, swag_lab_loginPage }) => { 
+      await When('I enter username "standard_user"', null, { swag_lab_loginPage }); 
+      await And('I enter password "secret_sauce"', null, { swag_lab_loginPage }); 
+      await And('I click on the login button', null, { swag_lab_loginPage }); 
+      await Then('I should be redirected to the homepage "https://www.saucedemo.com/inventory.html"', null, { swag_lab_loginPage }); 
     });
 
-    test('Example #2', { tag: ['@DataDriven'] }, async ({ When, Then, And, page }) => { 
-      await When('I enter username "problem_user"', null, { page }); 
-      await And('I enter password "secret_sauce"', null, { page }); 
-      await And('I click on the login button', null, { page }); 
-      await Then('I should be redirected to the homepage "https://www.saucedemo.com/inventory.html"', null, { page }); 
+    test('Example #2', { tag: ['@DataDriven'] }, async ({ When, Then, And, swag_lab_loginPage }) => { 
+      await When('I enter username "problem_user"', null, { swag_lab_loginPage }); 
+      await And('I enter password "secret_sauce"', null, { swag_lab_loginPage }); 
+      await And('I click on the login button', null, { swag_lab_loginPage }); 
+      await Then('I should be redirected to the homepage "https://www.saucedemo.com/inventory.html"', null, { swag_lab_loginPage }); 
     });
 
-    test('Example #3', { tag: ['@DataDriven'] }, async ({ When, Then, And, page }) => { 
-      await When('I enter username "performance_glitch_user"', null, { page }); 
-      await And('I enter password "secret_sauce"', null, { page }); 
-      await And('I click on the login button', null, { page }); 
-      await Then('I should be redirected to the homepage "https://www.saucedemo.com/inventory.html"', null, { page }); 
+    test('Example #3', { tag: ['@DataDriven'] }, async ({ When, Then, And, swag_lab_loginPage }) => { 
+      await When('I enter username "performance_glitch_user"', null, { swag_lab_loginPage }); 
+      await And('I enter password "secret_sauce"', null, { swag_lab_loginPage }); 
+      await And('I click on the login button', null, { swag_lab_loginPage }); 
+      await Then('I should be redirected to the homepage "https://www.saucedemo.com/inventory.html"', null, { swag_lab_loginPage }); 
     });
 
-    test('Example #4', { tag: ['@DataDriven'] }, async ({ When, Then, And, page }) => { 
-      await When('I enter username "error_user"', null, { page }); 
-      await And('I enter password "secret_sauce"', null, { page }); 
-      await And('I click on the login button', null, { page }); 
-      await Then('I should be redirected to the homepage "https://www.saucedemo.com/inventory.html"', null, { page }); 
+    test('Example #4', { tag: ['@DataDriven'] }, async ({ When, Then, And, swag_lab_loginPage }) => { 
+      await When('I enter username "error_user"', null, { swag_lab_loginPage }); 
+      await And('I enter password "secret_sauce"', null, { swag_lab_loginPage }); 
+      await And('I click on the login button', null, { swag_lab_loginPage }); 
+      await Then('I should be redirected to the homepage "https://www.saucedemo.com/inventory.html"', null, { swag_lab_loginPage }); 
     });
 
-    test('Example #5', { tag: ['@DataDriven'] }, async ({ When, Then, And, page }) => { 
-      await When('I enter username "visual_user"', null, { page }); 
-      await And('I enter password "secret_sauce"', null, { page }); 
-      await And('I click on the login button', null, { page }); 
-      await Then('I should be redirected to the homepage "https://www.saucedemo.com/inventory.html"', null, { page }); 
+    test('Example #5', { tag: ['@DataDriven'] }, async ({ When, Then, And, swag_lab_loginPage }) => { 
+      await When('I enter username "visual_user"', null, { swag_lab_loginPage }); 
+      await And('I enter password "secret_sauce"', null, { swag_lab_loginPage }); 
+      await And('I click on the login button', null, { swag_lab_loginPage }); 
+      await Then('I should be redirected to the homepage "https://www.saucedemo.com/inventory.html"', null, { swag_lab_loginPage }); 
     });
 
   });
@@ -52,7 +52,7 @@ test.describe('Verify that users can log in with valid credentials and handle di
 
 test.use({
   $test: [({}, use) => use(test), { scope: 'test', box: true }],
-  $uri: [({}, use) => use('PLAYWRIGHT_BDD\\FeatureFile\\Login_mulltiple_user.feature'), { scope: 'test', box: true }],
+  $uri: [({}, use) => use('PLAYWRIGHT_BDD\\FeatureFile\\Swag_lab_login.feature'), { scope: 'test', box: true }],
   $bddFileData: [({}, use) => use(bddFileData), { scope: "test", box: true }],
 });
 

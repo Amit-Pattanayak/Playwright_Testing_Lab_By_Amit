@@ -4,8 +4,11 @@ import { defineBddConfig } from 'playwright-bdd';
 
 
 const testDir = defineBddConfig({
-  paths: ['PLAYWRIGHT_BDD/FeatureFile/Login_mulltiple_user.feature'], // Path to all feature files
- require: ['PLAYWRIGHT_BDD/Step_Defination/Login_mulltiple_user.spec.js'],     // Folder for step definitions
+  //importTestFrom: 'PLAYWRIGHT_BDD/Fixtures/Swag_fixture.js',
+  paths: ['PLAYWRIGHT_BDD/FeatureFile/Swag_lab_login.feature'], // Path to all feature files
+  require: ['PLAYWRIGHT_BDD/Step_Defination/Swag_lab_login.spec.js',
+    'PLAYWRIGHT_BDD/Fixtures/Swag_fixture.js'
+  ],     // Folder for step definitions
   //outputDir: './Playwright/Step_Defination',     // Where new step files will be created
 });
 /**

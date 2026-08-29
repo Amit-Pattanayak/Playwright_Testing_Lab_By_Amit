@@ -1,5 +1,4 @@
 
-// Positive scenario
 import { createBdd } from 'playwright-bdd';
 import { expect } from '@playwright/test';
 import { url } from 'node:inspector';
