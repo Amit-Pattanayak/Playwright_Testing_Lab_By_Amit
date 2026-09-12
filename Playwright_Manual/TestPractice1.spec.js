@@ -49,4 +49,18 @@ await page.locator('#country').selectOption("India");
   await page.waitForTimeout(5000);
   // confirm the date value
   await expect(page.locator('#datepicker')).toHaveValue('06/03/1997');
+  
+  //Date Picker 3: (Select a Date Range)
+  await page.locator("#start-date").type("08/23/2026");
+  await page.locator("#end-date").type("08/23/2026");
+   await page.waitForTimeout(3000);
+   const Btn=await page.locator(".submit-btn");
+   await expect(Btn).toBeEnabled();
+   await Btn.click();
+
+
+
+
+
+
 });
