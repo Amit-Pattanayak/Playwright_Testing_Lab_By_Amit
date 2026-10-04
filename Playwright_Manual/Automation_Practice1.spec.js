@@ -33,7 +33,7 @@ await page.locator('#country').selectOption("India");
 
 // Selecting Mulltiple colour
   await page.locator('#colors').selectOption(['red', 'blue', 'green']);
-
+/*
 
   // Select multiple options by value
   await page.locator('#animals').selectOption(['lion']);
@@ -58,8 +58,40 @@ await page.locator('#country').selectOption("India");
    await expect(Btn).toBeEnabled();
    await Btn.click();
 
+*/
+/*
+   //DILOG HANDLER
+   page.on('dialog',async dialog =>{
+    expect (dialog.message()).toContain("I am an alert box!");
+    await dialog.accept();
+   });
+   //SIMPLE ALERT
+   await page.locator("#alertBtn").click();
+   await page.waitForTimeout(5000);
 
 
+//DILOG HANDLER
+   page.on('dialog',async dialog =>{
+    expect (dialog.message()).toContain("Press a button!");
+    await dialog.accept();
+   });
+//CONFIRMATION ALERT
+   await page.locator("#confirmBtn").click();
+   await page.waitForTimeout(5000);
+   const msg = await page.locator("#demo");
+   await expect (msg).toHaveText("You pressed OK!");
+*/
+   //DILOG HANDLER
+   page.on('dialog',async dialog =>{
+    expect (dialog.message()).toContain("Please enter your name");
+    await dialog.accept('Amit');
+   });
+//PROMPT ALERT
+   await page.locator("#promptBtn").click();
+   await page.waitForTimeout(5000);
+   const msg = await page.locator("#demo");
+   await expect (msg).toHaveText("Hello Amit! How are you today?");
+  
 
 
 
