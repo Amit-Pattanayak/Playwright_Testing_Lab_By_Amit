@@ -19,13 +19,29 @@ test('TableOperation',async ({page})=>{
 
 
     //2) Select a perticular product checkbox
+    /*
     const MatchedRow=row.filter({
         has:page.locator('td'),
         hasText: 'Tablet'
 
     })
     MatchedRow.locator('input').check();
-
+*/
+    //3) Selecting multiple product checkbox  using Re-usable Function
+    await SelectProduct(row, page, 'Smartphone');
+    await SelectProduct(row, page, 'Tablet');
+    await SelectProduct(row, page, 'Wireless Earbuds');
+    
     await page.waitForTimeout(5000);
 
 });
+
+async function SelectProduct(row, page, name )
+ {
+    const MatchedRow=row.filter({
+        has:page.locator('td'),
+        hasText: name
+
+    })
+    await MatchedRow.locator('input').check();
+}
