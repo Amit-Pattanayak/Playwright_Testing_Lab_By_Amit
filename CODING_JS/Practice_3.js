@@ -1,13 +1,11 @@
-let sum=0;
-let avg=0
-let num= [12,23,34,45,56,67,78,89]
+// MARK-10 (Determine if a string is a palindrome )
+  
+let word="Amit";
+let reverse ="";
 
-for(let i=0;i<num.length;i++){
-    sum+=num[i];
-    
-
-
+for (let i = word.length-1;i>=0;i--){
+    reverse +=word[i];
 }
-avg=sum/num.length;
+console.log(reverse);
 
-console.log(avg);
+
